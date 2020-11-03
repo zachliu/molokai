@@ -108,7 +108,7 @@ if s:molokai_original == 1
    highlight NonText         guifg=#75715E
    highlight SpecialKey      guifg=#75715E
 else
-   highlight Normal          guifg=#F8F8F2 guibg=#1B1D1E
+   highlight Normal          guifg=#F8F8F2 guibg=none
    highlight Comment         guifg=#7E8E91
    highlight CursorLine                    guibg=#293739
    highlight CursorLineNr    guifg=#FD971F               gui=none
