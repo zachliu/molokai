@@ -1,26 +1,33 @@
-# Molokai Color Scheme for Vim
+# Molokai Color Scheme for Neovim
 
-Molokai is a Vim port of the monokai theme for TextMate originally created by Wimer Hazenberg.
-
-By default, it has a dark gray background based on the version created by Hamish Stuart Macpherson for the E editor.
-
-![Gray Background](http://www.winterdom.com/weblog/content/binary/WindowsLiveWriter/MolokaiforVim_8602/molokai_normal_small_3.png)
-
-![Molokai Original](http://www.winterdom.com/weblog/content/binary/WindowsLiveWriter/MolokaiforVim_8602/molokai_original_small_3.png)
-
-256-Color terminals are also supported, though there are some differences with the Gui version. Only the dark gray background style is supported on terminal vim at this time.
+Let's cut to the chase. It's bright. It has hight contrast.
 
 ## Installation
 
-Copy the file on your .vim/colors folder.
+Use `vim-packager`
 
-If you prefer the scheme to match the original monokai background color, put this in your .vimrc file: 
-```
-let g:molokai_original = 1
-```
-
-There is also an alternative scheme under development for color terminals which attempts to bring the 256 color version as close as possible to the the default (dark) GUI version. To access, add this to your .vimrc:
-```
-let g:rehash256 = 1
+```vim
+call packager#add('git@github.com:zachliu/molokai.git')
 ```
 
+Use `vim-plug`
+
+```vim
+Plug 'zachliu/molokai'
+```
+
+## Toggle
+
+I believe there is a color for every mood. If you are anxious, `PaperColorSlim` may soothe you. If you are perky, try `Molokai`.
+
+```vim
+function ToggleColorSchemes()
+    if (g:colors_name == "PaperColorSlim")
+        colorscheme Molokai
+    else
+        colorscheme PaperColorSlim
+    endif
+endfunction
+
+nnoremap <silent> <leader>c :call ToggleColorSchemes()<CR>
+```
