@@ -1,6 +1,6 @@
 # Molokai Color Scheme for Neovim
 
-Let's cut to the chase. It's bright. It has hight contrast.
+Let's cut to the chase. It's bright. It has high contrast.
 
 ## Installation
 
